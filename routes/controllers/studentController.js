@@ -11,8 +11,8 @@ router.get('/getStudents', function (req, res, next) {
     getStudentService(req)
 })
 
-router.post('/regStudent', function (req, res, next) {
-    var result = registerStudent(req)
+router.post('/regStudent', async function (req, res, next) {
+    var result = await registerStudent(req)
     res.send(result)
 })
 

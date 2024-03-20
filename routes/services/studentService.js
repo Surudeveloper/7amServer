@@ -5,9 +5,9 @@ function getStudentService(req) {
     getStudentDAO(data)
 }
 
-function registerStudent(req) {
+async function registerStudent(req) {
     var data = req.body.data
-    var response = registerStudentDAO(data)
+    var response = await registerStudentDAO(data)
 
     return response
 }
